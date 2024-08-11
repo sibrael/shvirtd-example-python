@@ -25,7 +25,7 @@ services:
       - .env
     networks:
       - backend
-      ports:
+    ports:
         - 172.20.0.10:3306:3306
 
     networks:
