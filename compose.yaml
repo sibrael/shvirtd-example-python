@@ -1,5 +1,6 @@
 version: "3"
-include: proxy.yaml
+include: 
+  - proxy.yaml
 services:
 
   web:
