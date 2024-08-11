@@ -28,9 +28,9 @@ services:
     ports:
         - 172.20.0.10:3306:3306
 
-    networks:
-      backend: 
-       driver: bridge
-       ipam:
+  networks:
+    backend: 
+      driver: bridge
+      ipam:
          config:
           - subnet: 172.20.0.0/24
