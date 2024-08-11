@@ -10,7 +10,7 @@ services:
     networks:
         backend: {}
     ports:
-      - 172.20.0.5:5000:5000
+      - 172.20.0.5
     environment:
      - DB_HOST = 172.20.0.10:3306
      - DB_USER=${MYSQL_USER}
@@ -31,7 +31,7 @@ services:
     networks:
         backend: {}
     ports:
-        - 172.20.0.10:3306:3306
+        - 172.20.0.10
 networks:
   backend: 
     driver: bridge
