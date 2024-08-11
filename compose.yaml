@@ -11,6 +11,11 @@ services:
         backend: {}
     ports:
       - 172.20.0.5:5000:5000
+    environment:
+     - DB_HOST = 172.20.0.10:3306
+     - DB_USER=${MYSQL_USER}
+     - DB_PASSWORD==${MYSQL_PASSWORD}
+     - DB_NAME=${MYSQL_DATABASE}
     deploy:
       restart_policy:
         condition: on-failure
