@@ -11,10 +11,10 @@ services:
         backend: 
           ipv4_address: 172.20.0.5
     environment:
-     - DB_HOST = db
-     - DB_USER = ${MYSQL_USER}
-     - DB_PASSWORD = ${MYSQL_PASSWORD}
-     - DB_NAME = ${MYSQL_DATABASE}
+     - DB_HOST=db
+     - DB_USER=${MYSQL_USER}
+     - DB_PASSWORD=${MYSQL_PASSWORD}
+     - DB_NAME=${MYSQL_DATABASE}
     env_file:
       - .env
     deploy:
@@ -23,10 +23,10 @@ services:
   db:
     image: mysql:8
     environment:
-     - MYSQL_ROOT_PASSWORD = ${MYSQL_ROOT_PASSWORD}
-     - MYSQL_DATABASE = ${MYSQL_DATABASE}
-     - MYSQL_USER = ${MYSQL_USER}
-     - MYSQL_PASSWORD = ${MYSQL_PASSWORD}
+     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+     - MYSQL_DATABASE=${MYSQL_DATABASE}
+     - MYSQL_USER=${MYSQL_USER}
+     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
      - MYSQL_ROOT_HOST="%"
     env_file:
       - .env
