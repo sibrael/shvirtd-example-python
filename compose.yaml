@@ -29,9 +29,12 @@ services:
      - MYSQL_PASSWORD = ${MYSQL_PASSWORD}
     env_file:
       - .env
+    deploy:
+      restart_policy:
+        condition: on-failure
     networks:
-        backend:
-          ipv4_address: 172.20.0.10
+      backend:
+        ipv4_address: 172.20.0.10
 
 networks:
   backend: 
