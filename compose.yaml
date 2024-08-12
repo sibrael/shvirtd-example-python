@@ -9,8 +9,8 @@ services:
       dockerfile: Dockerfile.python
     networks:
         backend: {}
-    ports:
-      - 172.20.0.5
+        vpcbr:
+          ipv4_address: 172.20.0.5
     environment:
      - DB_HOST = 172.20.0.10:3306
      - DB_USER=${MYSQL_USER}
@@ -30,8 +30,9 @@ services:
       - .env
     networks:
         backend: {}
-    ports:
-        - 172.20.0.10
+        vpcbr:
+          ipv4_address: 172.20.0.10
+
 networks:
   backend: 
     driver: bridge
