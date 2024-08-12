@@ -11,7 +11,7 @@ services:
         backend: 
           ipv4_address: 172.20.0.5
     environment:
-     - DB_HOST = db:3306
+     - DB_HOST = db
      - DB_USER = ${MYSQL_USER}
      - DB_PASSWORD = ${MYSQL_PASSWORD}
      - DB_NAME = ${MYSQL_DATABASE}
@@ -27,6 +27,7 @@ services:
      - MYSQL_DATABASE = ${MYSQL_DATABASE}
      - MYSQL_USER = ${MYSQL_USER}
      - MYSQL_PASSWORD = ${MYSQL_PASSWORD}
+     - MYSQL_ROOT_HOST="%"
     env_file:
       - .env
     deploy:
